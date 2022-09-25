@@ -3,7 +3,7 @@ package Plot;
 public class Person {
     private String firstName, lastName, phoneNumber, gender, cnic;
     private Address address;
-    private Date dob; 
+    private Date dob;
 
     public Person(String firstName, String lastName, String gender, String cnic, String phoneNumber, Date dob) {
         this.firstName = firstName;
@@ -43,6 +43,6 @@ public class Person {
     }
 
     public String toString() {
-        return String.format("Name: %s %s\nGender: %s\nCNIN: %s\nCell: %s\n DOB: %s", getName(), gender, cnic, phoneNumber, dob);
+        return String.format("Name: %s\nGender: %s\nCNIC: %s\nCell: %s\nDOB: %s\n", getName(), gender, cnic, phoneNumber, dob);
     }
 }

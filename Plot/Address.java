@@ -20,7 +20,7 @@ public class Address {
     }
 
     public String toString(){
-        return String.format("%d-%s, %d Street, %s, %s, %s", number, block, society, city, state);
+        return String.format("%d-%s, %d Street, %s, %s, %s\n", number, block, streetNo, society, city, state);
     }
 
     public int getZipCode() {
@@ -46,7 +46,7 @@ public class Address {
     public String getState() {
         return state;
     }
-    
+
     public int getStreetNo() {
         return streetNo;
     }

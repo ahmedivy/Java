@@ -26,6 +26,6 @@ public class Dimension {
 
     @Override
     public String toString() {
-        return String.format("Length: %d\nWidth: %d", length, width);
+        return String.format("Length: %.2f\nWidth: %.2f\n", length, width);
     }
 }

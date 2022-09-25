@@ -40,7 +40,7 @@ public class Plot {
     public void setOwner(Person owner) {
         this.owner = owner;
     }
-    
+
     public void setDimension(Dimension dimension) {
         this.dimension = dimension;
     }
