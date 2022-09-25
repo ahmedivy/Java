@@ -56,12 +56,41 @@ public class Rectangle {
 
     // Does Overlap?
     public boolean overlaps(Rectangle r2) {
-        if (r2.getX() + r2.getWidth() < x && r2.getX() > x + width)
-            return false;
-        if (r2.getY() + r2.getLength() < y && r2.getY() > y + length)
-            return false;
+        if (r2.getX() < x + width && r2.getX() + r2.getWidth() > x) {
+            if (r2.getY() < y + length && r2.getY() + r2.getLength() > y) {
+                return true;
+            }
+        }
+        return false;
+    }
 
-        return true;
+    // Get Intersection of two rectangles
+    public Rectangle intersection(Rectangle r2) {
+
+        // Returns null if rectangles do not overlap
+        if (this.overlaps(r2) == false) {
+            return null;
+        }
+
+        // Otherwise return rectangles formed by intersection
+        int maxX = Math.min(Rectangle.getMaxX(this), Rectangle.getMaxX(r2));
+        int maxY = Math.min(Rectangle.getMaxY(this), Rectangle.getMaxY(r2));
+        int xX = Math.max(this.x, r2.getX());
+        int xY = Math.max(this.y, r2.getY());
+
+        return new Rectangle(maxY - xY, maxX - xX, xX, xY);
+    }
+
+    public static int getMaxX(Rectangle r) {
+        return (int) (r.getX() + r.getWidth());
+    }
+
+    public static int getMaxY(Rectangle r) {
+        return (int) (r.getY() + r.getLength());
+    }
+
+    public String toString() {
+        return "Length: " + length + ", Width: " + width + ", X: " + x + ", Y: " + y;
     }
 
 }
