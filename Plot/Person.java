@@ -1,13 +1,11 @@
 package Plot;
 
-import java.util.Date;
-
 public class Person {
     private String firstName, lastName, phoneNumber, gender, cnic;
     private Address address;
     private Date dob; 
 
-    public Person(String firstName, String lastName, String gender, String cnic, String phoneNumber, Date dob){
+    public Person(String firstName, String lastName, String gender, String cnic, String phoneNumber, Date dob) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.gender = gender;
@@ -47,5 +45,4 @@ public class Person {
     public String toString() {
         return String.format("Name: %s %s\nGender: %s\nCNIN: %s\nCell: %s\n DOB: %s", getName(), gender, cnic, phoneNumber, dob);
     }
-
 }

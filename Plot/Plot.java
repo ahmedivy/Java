@@ -49,4 +49,8 @@ public class Plot {
         return dimension.getLength() * dimension.getWidth();
     }
 
+    public String toString() {
+        return "Owner:-\n" + owner + "Address:-\n" + address + "Dimensions:-\n" + dimension + "Cost:-\nRs: " + cost;
+    }
+
 }
