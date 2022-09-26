@@ -73,24 +73,30 @@ public class Rectangle {
         }
 
         // Otherwise return rectangles formed by intersection
-        int maxX = Math.min(Rectangle.getMaxX(this), Rectangle.getMaxX(r2));
-        int maxY = Math.min(Rectangle.getMaxY(this), Rectangle.getMaxY(r2));
+        int maxX = Math.min(Rectangle.getX2(this), Rectangle.getX2(r2));
+        int maxY = Math.min(Rectangle.getY2(this), Rectangle.getY2(r2));
         int xX = Math.max(this.x, r2.getX());
         int xY = Math.max(this.y, r2.getY());
 
         return new Rectangle(maxY - xY, maxX - xX, xX, xY);
     }
 
-    public static int getMaxX(Rectangle r) {
+    public static int getX2(Rectangle r) {
         return (int) (r.getX() + r.getWidth());
     }
 
-    public static int getMaxY(Rectangle r) {
+    public static int getY2(Rectangle r) {
         return (int) (r.getY() + r.getLength());
     }
 
     public String toString() {
         return "Length: " + length + ", Width: " + width + ", X: " + x + ", Y: " + y;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        Rectangle temp = (Rectangle) obj;
+        return length == temp.length && width == temp.width;
     }
 
 }
