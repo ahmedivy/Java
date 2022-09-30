@@ -32,9 +32,7 @@ public class Main {
             if (option.equals("1")){
                 System.out.println("Enter title of the book: ");
 
-                Scanner titleScan = new Scanner(System.in);
-
-                String title = titleScan.nextLine();
+                String title = input.nextLine();
             
                 int index = store.searchBook(title);
                 
@@ -69,5 +67,7 @@ public class Main {
             }
 
         }
+
+        input.close();
     }
 }
