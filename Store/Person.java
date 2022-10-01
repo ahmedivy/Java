@@ -1,9 +1,10 @@
-public class Author {
+
+public class Person {
     private String firstName;
     private String lastName;
     private String email;
 
-    public Author(String firstName, String lastName, String email){
+    public Person(String firstName, String lastName, String email){
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -35,6 +36,6 @@ public class Author {
 
     @Override
     public String toString() {
-        return "Name: " + firstName + " " + lastName + "\n" + "Email: " + email;
+        return firstName + " " + lastName;
     }
 }

@@ -1,11 +1,12 @@
+
 public class Book {
     private final String ISBN;
     private String title;
-    private Author author;
+    private Person author;
     private double price;
     private int quantity;
 
-    public Book(String ISBN, String title, Author author, double price, int quantity){
+    public Book(String ISBN, String title, Person author, double price, int quantity){
         this.ISBN = ISBN;
         this.title = title;
         this.author = author;
@@ -15,10 +16,10 @@ public class Book {
 
     @Override
     public String toString() {
-        return String.format("ISBN: %s, Title: %s, Author: %s, Price: %.2f, Quantity: %d", ISBN, title, author, price, quantity);
+        return String.format("%6s %20s %20s %8.2f %8d", ISBN, title, author, price, quantity);
     }
 
-    public Author getAuthor() {
+    public Person getAuthor() {
         return author;
     }
 
@@ -38,7 +39,7 @@ public class Book {
         return title;
     }
 
-    public void setAuthor(Author author) {
+    public void setAuthor(Person author) {
         this.author = author;
     }
 
