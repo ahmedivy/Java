@@ -1,7 +1,10 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
 
         Store store = new Store();
+        Scanner input = new Scanner(System.in);
 
         // Adding some books
         Person deitel = new Person("Paul", "Deitel", "paul@deitel.com");
@@ -14,8 +17,11 @@ public class Main {
         store.addBook("123213", "HTML Intro", harvey, 20, 20);
         store.addBook("789777", "Intro to CSS", deitel, 35, 45);
         store.addBook("456435", "Move to TypeScript", deitel, 60, 12);
+        store.addBook("473382", "Data Science with R", deitel, 290, 38);
+        store.addBook("123238", "Automate with Python", harvey, 350, 120);
+        store.addBook("123034", "Learn ML with TensorFlow", deitel, 400, 50);
         
-        store.menu();
-        return;
+        store.menu(input);
+        input.close();
     }
 }

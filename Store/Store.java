@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class Store {
     
     private Book[] booksList = new Book[500];
@@ -13,19 +12,17 @@ public class Store {
         this.revenue = revenue;
     }
 
-    public Book[] getBooksList() {
-        return booksList;
-    }
-
     public void printList() {
-        System.out.printf("%6s %20s %20s %12s %12s\n", "ISBN", "Title", "Author", "Price", "Quantity");
-        System.out.println("======================================================================================");
+        System.out.println("==================================================================================");
+        System.out.printf("%-10s%-32s%-20s%-9s  %-8s\n", "ISBN", "Title", "Author", "Price", "Quantity");
+        System.out.println("==================================================================================");
         for (Book book : booksList) {
             if (book == null){
                 break;
             }
             System.out.println(book);
         }
+        System.out.println("==================================================================================");
     }
 
 
@@ -42,44 +39,44 @@ public class Store {
     }
 
     public void addBook(String ISBN, String title,  Person author, double price, int quantity) {
-        for (Book book:booksList) {
-            if (book == null){
-                book = new Book(ISBN, title, author, price, quantity);
-                return;
+        for (int i = 0; i < booksList.length; i++) {
+            if (booksList[i] == null){
+                booksList[i] = new Book(ISBN, title, author, price, quantity);
+                break;
             }
         }
     }
 
-    public void sellBook() {
-        Scanner input = new Scanner(System.in);
+    public void sellBook(Scanner input) {
+        input = new Scanner(System.in);
         System.out.println("Enter the title of book:");
         String title = input.nextLine();
         System.out.println("Enter the quantity:");
         int quantity = input.nextInt();
         int index = searchBook(title);
         if (index == -1) {
-            System.out.println("Book not found");;
+            System.out.println("Book not found\n\n");;
         }
         else {
-            if (booksList[index].getQuantity() < quantity){
-                System.out.println("Not enough quantity!");
+            if (booksList[index].getQuantity() < quantity) {
+                System.out.println("Not enough quantity!\n\n");
             }
             else {
                 booksList[index].setQuantity(booksList[index].getQuantity() - quantity);
                 double total = booksList[index].getPrice() * quantity;
                 revenue += total;
-                System.out.printf("Book(s) sold for Rs. %.2f\nTotal Revenue: Rs. %.2f", total, revenue);
+                System.out.printf("Book(s) sold for Rs. %.2f\nTotal Revenue: Rs. %.2f\n\n", total, revenue);
             }
         }
-        input.close();
     }
 
-    public void menu() {
-        Scanner input = new Scanner(System.in);
+    public void menu(Scanner input) {
+        
         int option;
+        String title;
 
         outer: while(true) {
-            System.out.println("     MENU");
+            System.out.println("\n     MENU");
             System.out.println("1. Search a book");
             System.out.println("2. Sell a book");
             System.out.println("3. Print all books");
@@ -90,18 +87,18 @@ public class Store {
             switch (option) {
                 case 1:
                     System.out.println("Enter title of the book: ");
-                    String title = input.nextLine();
+                    title = input.nextLine();
                     int index = searchBook(title);
                     if (index == -1){
-                        System.out.println("Book not found!");
+                        System.out.println("Book not found!\n");
                     }
                     else {
-                        System.out.println("Book is present at index " + index + ".");
+                        System.out.println("Book is present at index " + index + ".\n");
                     }
                     break;
 
                 case 2:
-                    sellBook();
+                    sellBook(input);
                     break;
 
                 case 3:
@@ -109,16 +106,16 @@ public class Store {
                     break;
                 
                 case 4:
-                    System.out.printf("Total Revenue is Rs. %.2f", revenue);
+                    System.out.printf("Total Revenue is Rs. %.2f\n\n", revenue);
+                    break;
 
                 case 5:
                     break outer;
             
                 default:
-                    System.out.println("Wrong Input!");
+                    System.out.println("Wrong Input!\n\n");
                     break;
             }
         }
-        input.close();
     }
 }

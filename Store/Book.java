@@ -16,7 +16,7 @@ public class Book {
 
     @Override
     public String toString() {
-        return String.format("%6s %20s %20s %8.2f %8d", ISBN, title, author, price, quantity);
+        return String.format("%-10s%-32s%-20s%9.2f  %8d", ISBN, title, author, price, quantity);
     }
 
     public Person getAuthor() {
