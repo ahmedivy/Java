@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 public class Store {
     
     private Book[] booksList = new Book[500];
@@ -86,6 +87,7 @@ public class Store {
             option = input.nextInt();
             switch (option) {
                 case 1:
+                    input.nextLine();
                     System.out.println("Enter title of the book: ");
                     title = input.nextLine();
                     int index = searchBook(title);

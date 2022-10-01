@@ -1,4 +1,3 @@
-
 public class Book {
     private final String ISBN;
     private String title;
