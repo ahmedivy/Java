@@ -48,12 +48,14 @@ public class Store {
         }
     }
 
-    public void sellBook(Scanner input) {
+    public void sellBook() {
+        Scanner input = new Scanner(System.in);
         input = new Scanner(System.in);
         System.out.println("Enter the title of book:");
         String title = input.nextLine();
         System.out.println("Enter the quantity:");
         int quantity = input.nextInt();
+        input.nextLine();
         int index = searchBook(title);
         if (index == -1) {
             System.out.println("Book not found\n\n");;
@@ -71,10 +73,11 @@ public class Store {
         }
     }
 
-    public void menu(Scanner input) {
+    public void menu() {
         
         int option;
         String title;
+        Scanner input = new Scanner(System.in);
 
         outer: while(true) {
             System.out.println("\n     MENU");
@@ -100,7 +103,7 @@ public class Store {
                     break;
 
                 case 2:
-                    sellBook(input);
+                    sellBook();
                     break;
 
                 case 3:
@@ -119,5 +122,6 @@ public class Store {
                     break;
             }
         }
+        input.close();
     }
 }

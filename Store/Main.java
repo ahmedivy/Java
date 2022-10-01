@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
 
         Store store = new Store();
-        Scanner input = new Scanner(System.in);
+        // Scanner input = new Scanner(System.in);
 
         // Adding some books
         Person deitel = new Person("Paul", "Deitel", "paul@deitel.com");
@@ -21,7 +21,7 @@ public class Main {
         store.addBook("123238", "Automate with Python", harvey, 350, 120);
         store.addBook("123034", "Learn ML with TensorFlow", deitel, 400, 50);
         
-        store.menu(input);
-        input.close();
+        store.menu();
+        // input.close();
     }
 }
