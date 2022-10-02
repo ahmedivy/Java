@@ -38,20 +38,12 @@ public class Book {
         return title;
     }
 
-    public void setAuthor(Person author) {
-        this.author = author;
-    }
-
     public void setPrice(double price) {
         this.price = price;
     }
 
     public void setQuantity(int quantity) {
         this.quantity = quantity;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
     }
 
     @Override
