@@ -38,10 +38,10 @@ public class Store {
         return -1;
     }
 
-    public void addBook(String ISBN, String title, Person author, double price, int quantity) {
+    public void addBook(Book book) {
         for (int i = 0; i < booksList.length; i++) {
             if (booksList[i] == null) {
-                booksList[i] = new Book(ISBN, title, author, price, quantity);
+                booksList[i] = new Book(book);
                 break;
             }
         }

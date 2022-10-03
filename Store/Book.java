@@ -13,6 +13,14 @@ public class Book {
         this.quantity = quantity;
     }
 
+    public Book(Book obj) {
+        this.ISBN = obj.getISBN();
+        this.title = obj.getTitle();
+        this.price = obj.getPrice();
+        this.quantity = obj.getQuantity();
+        this.author = new Person(obj.getAuthor());
+    }
+
     @Override
     public String toString() {
         return String.format("%-10s%-32s%-20s%9.2f  %8d", ISBN, title, author, price, quantity);

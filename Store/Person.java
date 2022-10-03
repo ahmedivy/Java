@@ -9,6 +9,12 @@ public class Person {
         this.email = email;
     }
 
+    public Person(Person obj) {
+        this.firstName = obj.firstName;
+        this.lastName = obj.lastName;
+        this.email = obj.email;
+    }
+
     public String getEmail() {
         return email;
     }
