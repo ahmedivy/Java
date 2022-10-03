@@ -39,10 +39,14 @@ public class Store {
     }
 
     public void addBook(Book book) {
-        for (int i = 0; i < booksList.length; i++) {
-            if (booksList[i] == null) {
-                booksList[i] = new Book(book);
-                break;
+        if (booksList[booksList.length - 1] != null) {
+            System.out.println("Not enough space!");
+        } else {
+            for (int i = 0; i < booksList.length; i++) {
+                if (booksList[i] == null) {
+                    booksList[i] = new Book(book);
+                    break;
+                }
             }
         }
     }
