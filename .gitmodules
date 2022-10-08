@@ -1,0 +1,3 @@
+[submodule "LabManagement"]
+	path = LabManagement
+	url = https://github.com/SoftSolutions0/LabManagement.git
