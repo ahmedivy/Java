@@ -98,5 +98,4 @@ public class Rectangle {
         Rectangle temp = (Rectangle) obj;
         return length == temp.length && width == temp.width;
     }
-
 }
