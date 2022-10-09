@@ -1,5 +1,3 @@
-package Plot;
-
 public class Main {
     public static void main(String[] args) {
         Person owner = new Person("Ahmed", "Abdullah", "Male", "35404-7235834-1", "0317-9947486", new Date(2003, 06, 07));

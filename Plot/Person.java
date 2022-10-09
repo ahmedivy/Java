@@ -1,5 +1,3 @@
-package Plot;
-
 public class Person {
     private String firstName, lastName, phoneNumber, gender, cnic;
     private Address address;

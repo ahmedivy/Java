@@ -1,5 +1,3 @@
-package Plot;
-
 public class Date {
     public int year, month, date;
 

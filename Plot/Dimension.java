@@ -1,5 +1,3 @@
-package Plot;
-
 public class Dimension {
     private double length, width;
 

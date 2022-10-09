@@ -1,5 +1,3 @@
-package Plot;
-
 public class Plot {
     private Person owner;
     private Address address;

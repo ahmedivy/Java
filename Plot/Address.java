@@ -1,5 +1,3 @@
-package Plot;
-
 public class Address {
     private int number;
     private int streetNo;
