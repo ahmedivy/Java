@@ -4,7 +4,7 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Constructor;
 import java.io.IOException;
 
-import BookStore.*;;
+import BookStore.*;
 
 public class ClassTest{
     public static void main(String[] args) throws IOException {
