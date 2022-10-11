@@ -1,4 +1,6 @@
-public class Main {
+package BookStore;
+
+public class BookTest {
     public static void main(String[] args) {
 
         Store store = new Store();
