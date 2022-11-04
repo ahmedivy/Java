@@ -1,6 +1,7 @@
 package Exercise12;
 
 import java.util.ArrayList;
+import java.time.LocalDate;
 
 public class PayrollSystemTest {
     public static void main(String[] args) {
@@ -28,7 +29,7 @@ public class PayrollSystemTest {
 
         // Adding bonus if birthdate month is current month
         for (Employee currentEmployee : employees) {
-            if  (currentEmployee.getBirthDate().getMonth() == 9) {
+            if  (currentEmployee.getBirthDate().getMonth() == LocalDate.now().getMonthValue()) {
                 System.out.printf("%s%n%s: $%,.2f%n%n", currentEmployee, "earned", currentEmployee.earnings()+100);
             }
             else {
