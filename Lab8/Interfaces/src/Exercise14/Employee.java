@@ -1,25 +1,16 @@
-package Exercise12;
+package Exercise14;
 
 public abstract class Employee {
     private final String firstName;
     private final String lastName;
     private final String socialSecurityNumber;
     private final Date birthDate;
-    private float bonus = 0;
 
     public Employee(String firstName, String lastName, String socialSecurityNumber, Date birthDate) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.socialSecurityNumber = socialSecurityNumber;
         this.birthDate = birthDate;
-    }
-
-    public float getBonus() {
-        return bonus;
-    }
-
-    public void setBonus(float bonus) {
-        this.bonus = bonus;
     }
 
     public String getFirstName() {

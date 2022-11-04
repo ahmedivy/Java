@@ -1,4 +1,4 @@
-package Exercise12;
+package Exercise14;
 
 public class SalariedEmployee extends Employee {
     private double weekSalary;
@@ -24,7 +24,7 @@ public class SalariedEmployee extends Employee {
 
     @Override
     public double earnings() {
-        return getWeekSalary() + getBonus();
+        return getWeekSalary();
     }
 
     @Override

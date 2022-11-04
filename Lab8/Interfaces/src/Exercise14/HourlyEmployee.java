@@ -1,4 +1,4 @@
-package Exercise12;
+package Exercise14;
 
 public class HourlyEmployee extends Employee {
     private double wages;
@@ -41,9 +41,9 @@ public class HourlyEmployee extends Employee {
     @Override
     public double earnings() {
         if (getHours() <= 40) {
-            return (getWages() * getHours()) + getBonus();
+            return getWages() * getHours();
         } else {
-            return (40 * getWages() + (getHours() - 40) * getWages() * 1.5) + getBonus();
+            return 40 * getWages() + (getHours() - 40) * getWages() * 1.5;
         }
     }
 

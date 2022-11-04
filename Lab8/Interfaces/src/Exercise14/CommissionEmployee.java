@@ -1,4 +1,4 @@
-package Exercise12;
+package Exercise14;
 
 public class CommissionEmployee extends Employee {
     private double grossSales;
@@ -40,7 +40,7 @@ public class CommissionEmployee extends Employee {
 
     @Override
     public double earnings() {
-        return (getCommissionRate() * getGrossSales()) + getBonus();
+        return getCommissionRate() * getGrossSales();
     }
 
     @Override

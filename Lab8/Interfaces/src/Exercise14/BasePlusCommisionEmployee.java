@@ -1,4 +1,4 @@
-package Exercise12;
+package Exercise14;
 
 public class BasePlusCommisionEmployee extends CommissionEmployee {
     private double baseSalary;
@@ -24,7 +24,7 @@ public class BasePlusCommisionEmployee extends CommissionEmployee {
 
     @Override
     public double earnings() {
-        return getBaseSalary() + super.earnings() + getBonus();
+        return getBaseSalary() + super.earnings();
     }
 
     @Override
