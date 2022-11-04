@@ -1,6 +1,6 @@
 package Exercise12;
 
-public class BasePlusCommisionEmployee extends ComissionEmployee {
+public class BasePlusCommisionEmployee extends CommissionEmployee {
     private double baseSalary;
 
     public BasePlusCommisionEmployee(String firstName, String lastName, String socialSecurityNumber, double grossSales, double commissionRate, double baseSalary) {

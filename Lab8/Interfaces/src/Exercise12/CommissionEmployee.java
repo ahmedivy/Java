@@ -1,10 +1,10 @@
 package Exercise12;
 
-public class ComissionEmployee extends Employee {
+public class CommissionEmployee extends Employee {
     private double grossSales;
     private double commissionRate;
 
-    public ComissionEmployee(String firstName, String lastName, String socialSecurityNumber, double grossSales, double commissionRate) {
+    public CommissionEmployee(String firstName, String lastName, String socialSecurityNumber, double grossSales, double commissionRate) {
         super(firstName, lastName, socialSecurityNumber);
         if (grossSales < 0.0) {
             throw new IllegalArgumentException("Gross sales must be >= 0.0");
