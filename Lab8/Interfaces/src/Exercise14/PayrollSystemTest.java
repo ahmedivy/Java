@@ -1,7 +1,6 @@
 package Exercise14;
 
 import java.util.ArrayList;
-import java.time.LocalDate;
 
 public class PayrollSystemTest {
     public static void main(String[] args) {
