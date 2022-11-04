@@ -3,8 +3,8 @@ package Exercise12;
 public class BasePlusCommisionEmployee extends CommissionEmployee {
     private double baseSalary;
 
-    public BasePlusCommisionEmployee(String firstName, String lastName, String socialSecurityNumber, double grossSales, double commissionRate, double baseSalary) {
-        super(firstName, lastName, socialSecurityNumber, grossSales, commissionRate);
+    public BasePlusCommisionEmployee(String firstName, String lastName, String socialSecurityNumber, Date birthDate, double grossSales, double commissionRate, double baseSalary) {
+        super(firstName, lastName, socialSecurityNumber, birthDate,  grossSales, commissionRate);
         if (baseSalary < 0.0) {
             throw new IllegalArgumentException("Base salary must be >= 0.0");
         }
